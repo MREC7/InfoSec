@@ -1,11 +1,3 @@
-#logo {
-  width: 125px;
-  height: auto;
-  position: absolute;
-  top: 0px;
-  left: 5px;
-}
-
 .fade-in {
   animation: fadeInAnimation 0.3s ease-in forwards;
   opacity: 0;
@@ -30,14 +22,14 @@ body {
 header {
   background-color: #357EC7;
   color: #fff;
-  padding: 20px;
+  padding: 1%;
   text-align: center;
 }
 
 header h1 {
+  font-size: xx-large;
   margin: 0;
   color: white;
-  margin-bottom: 10px;
 }
 
 main {
@@ -51,7 +43,8 @@ section {
   background-color: black;
   padding: 20px;
   border-radius: 5px;
-  color: #fff;
+  color: #357EC7;
+  border: 2px solid;
 }
 
 h4 {
@@ -80,6 +73,7 @@ button {
   color: white;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -110,9 +104,11 @@ footer {
   margin-bottom: 10px;
 }
 
+nav {
+  font-size: large;
+}
 nav ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -125,20 +121,13 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 1px 2px;
-  border: 2px solid white;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: blue;
-  color: #fff;
+  color: black;
 }
 #login-register-button {
-  position: absolute;
-  top: 30px;
-  right: 20px;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -240,4 +229,55 @@ nav ul li a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9999;
   animation: fadeInAnimation 0.5s ease-in forwards;
+}
+#encryption-method {
+  background-color: black;
+  color: white;
+  border: 2px solid #357EC7;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#key-input-container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#key-input-container input {
+  background: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #357EC7;
+  padding: 5px;
+  width: 100%;
+}
+
+button {
+  background-color: #357EC7;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+#encryption-result {
+  margin-top: 20px;
+  border: 2px solid #0078d4;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
 }

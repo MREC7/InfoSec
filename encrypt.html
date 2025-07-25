@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Шифрование текста</title>
+  <title>InfoSec</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="fade-in">
   <header>
-    <img src="logo.png"id="logo">
-    <h1>Шифрование текста</h1>
+    <h1 style="float:left"><b>Info<font color="black">Sec</font></b></h1>
     <nav>
       <ul>
         <li><a href="index.html">Главная</a></li>
@@ -17,7 +16,6 @@
         <li><a href="pgenerator.html">Генерация пароля</a></li>
       </ul>
     </nav>
-    <a href="registration.html" id="login-register-button">Войти/Зарегистрироваться</a>
   </header>
   <main>
     <section id="encryption-info">
@@ -31,26 +29,31 @@
       <p>Процесс работы шифрования основан на математических алгоритмах, которые преобразуют исходные данные в нечитабельный вид, который можно восстановить только при наличии правильного ключа. Это обеспечивает защиту данных от несанкционированного доступа и поддерживает конфиденциальность важной информации.</p>
     </section>
     <section id="encryption-form">
-      <h2>Форма шифрования текста</h2>
-      <textarea id="original-text" placeholder="Введите текст для шифрования"></textarea>
-      <div>
-        <input type="radio" id="md5" name="encryptionMethod" value="md5" checked>
-        <label for="md5">MD5</label>
-        <input type="radio" id="sha1" name="encryptionMethod" value="sha1">
-        <label for="sha1">SHA-1</label>
-        <input type="radio" id="sha256" name="encryptionMethod" value="sha256">
-        <label for="sha256">SHA-256</label>
-        <input type="radio" id="sha512" name="encryptionMethod" value="sha512">
-        <label for="sha256">SHA-512</label>
-        <input type="radio" id="AES" name="encryptionMethod" value="aes">
-        <label for="aes">AES(Ключ: шаг)</label>
-      </div>
-      <button onclick="encryptText()">Зашифровать текст</button>
-      <div id="encryption-result">Результат будет выведен здесь.</div>
+     <h2>Форма шифрования текста</h2>
+<textarea id="original-text" placeholder="Введите текст для шифрования"></textarea>
+
+<div>
+  <label for="encryption-method">Метод шифрования:</label>
+  <select id="encryption-method" onchange="toggleKeyInput()">
+    <option value="md5" id="md5" name="encryptionMethod">MD5</option>
+    <option value="sha1" id="sha1" name="encryptionMethod">SHA-1</option>
+    <option value="sha256" id="sha256" name="encryptionMethod">SHA-256</option>
+    <option value="sha512" id="sha512" name="encryptionMethod">SHA-512</option>
+    <option value="aes" id="aes" name="encryptionMethod">AES(Ключ: Безопасность)</option>
+  </select>
+</div>
+
+<div id="key-input-container" style="display:none; margin-top: 10px;">
+  <input type="text" id="aes-key" placeholder="Введите ключ (например, шаг)" />
+</div>
+
+<button onclick="encryptText()">Зашифровать текст</button>
+<div id="encryption-result">Результат будет выведен здесь.</div>
+
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Steps with a Shield.</p>
+    <p>&copy; 2025 InfoSec.</p>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
   <script src="encryption.js"></script>

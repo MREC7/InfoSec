@@ -1,6 +1,6 @@
 function encryptText() {
   var originalText = document.getElementById('original-text').value;
-  var selectedMethod = document.querySelector('input[name="encryptionMethod"]:checked').value;
+  var selectedMethod = document.querySelector('option[name="encryptionMethod"]:checked').value;
   var hash;
 
   if (selectedMethod === 'md5') {
@@ -12,7 +12,7 @@ function encryptText() {
   } else if (selectedMethod === 'sha512') {
     hash = CryptoJS.SHA512(originalText).toString();
   } else if (selectedMethod === 'aes') {
-    hash = CryptoJS.AES.encrypt(originalText, "шаг").toString();
+    hash = CryptoJS.AES.encrypt(originalText, "Безопасность").toString();
   }
 
   document.getElementById('encryption-result').innerText = selectedMethod.toUpperCase() + ": " + hash;
