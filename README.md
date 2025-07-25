@@ -1,1 +1,2 @@
-# techchaos.github.io
+# Steps with a Shield
+Сайт про кибербезопасность, созданный мной во время олимпиады.
