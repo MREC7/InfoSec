@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генерация пароля</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+  <header>
+    <img src="logo.png"id="logo">
+    <h1>Генерация пароля</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="encrypt.html">Шифрование текста</a></li>
+        <li><a href="pgenerator.html">Генерация пароля</a></li>
+      </ul>
+    </nav>
+    <a href="registration.html" id="login-register-button">Войти/Зарегистрироваться</a>
+  </header>
+  <main>
+    <section id="password-info">
+      <h2>Краткая информация о надёжности пароля</h2>
+      <p>Надёжные, сложные пароли играют <font color="#357EC7">очень важную роль</font> в цифровой безопасности. Слабые пароли могут быть легко взломаны хакерами и мошенниками с использованием методов, таких как:</p> 
+      <ul>
+        <li color="#357EC7">Словарные атаки.</li>
+        <li color="#357EC7">Перебор по всем возможным комбинациям символов.</li>
+        <li color="#357EC7">Использование утечек баз данных.</li>
+        </ul>
+        <p>Поэтому важно создавать пароли, содержащие <font color="#357EC7">комбинацию букв, цифр и специальных символов,</font> а также избегать очевидных слов и личной информации.</p>
+    </section>
+    <section id="password-form">
+      <h2>Форма генерации пароля</h2>
+      <label for="password-length">Длина пароля:</label>
+      <input type="range" id="password-length" min="8" max="32" value="8">
+      <output for="password-length" id="password-length-output">8</output> символов
+      <br>
+      <input type="checkbox" id="include-uppercase">
+      <label for="include-uppercase">Включить заглавные буквы</label>
+      <br>
+      <input type="checkbox" id="include-lowercase" checked>
+      <label for="include-lowercase">Включить строчные буквы</label>
+      <br>
+      <input type="checkbox" id="include-numbers" checked>
+      <label for="include-numbers">Включить цифры</label>
+      <br>
+      <input type="checkbox" id="include-symbols">
+      <label for="include-symbols">Включить специальные символы</label>
+      <br>
+      <button onclick="generatePassword()">Сгенерировать пароль</button>
+      <div id="password-results">
+        <p id="generated-password">Результат будет выведен здесь.</p>
+        <p id="password-strength"></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Steps with a Shield.</p>
+  </footer>
+  <script src="password.js"></script>
+</body>
+</html>

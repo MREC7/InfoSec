@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авторизация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fade-in">
+  <header>
+    <img src="logo.png"id="logo">
+    <h1>Авторизация</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="encrypt.html">Шифрование текста</a></li>
+        <li><a href="pgenerator.html">Генерация пароля</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="user-exists" class="popup-message">Данный пользователь уже существует!</div>
+  <div id="login-success" class="popup-message">Вход выполнен успешно!</div>
+  <div id="wnop" class="popup-message">Неверное имя пользователя или пароль!</div>
+  <div id="registration-success" class="popup-message">Регистрация успешна!</div>
+  <main>
+  <section id="registration">
+    <h2>Регистрация</h2>
+    <form id="registration-form">
+      <label for="username">Имя пользователя:</label>
+      <input type="text" id="username" required>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  </section>
+  <section id="login">
+    <h2>Вход</h2>
+    <form id="login-form">
+      <label for="login-username">Имя пользователя:</label>
+      <input type="text" id="login-username" required>
+      <label for="login-password">Пароль:</label>
+      <input type="password" id="login-password" required>
+      <button type="submit">Войти</button>
+    </form>
+  </section>
+</main>
+  <footer>
+    <p>&copy; 2024 Steps with a Shield.</p>
+  </footer>
+  <script src="registration.js"></script>
+</body>
+</html>
+
